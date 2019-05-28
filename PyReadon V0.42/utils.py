@@ -1,5 +1,6 @@
 import fitz
 from collections import namedtuple
+import sqlite3
 
 book_attr = 'path format title author creator producer'
 book_info = namedtuple('info', book_attr)
@@ -16,7 +17,10 @@ class Book:
     
     # 获取元信息
     def get_meta_data(self, fname):
-        file = fitz.open(fname)
+        try:
+            file = fitz.open(fname)
+        except RuntimeError:
+            raise 
         metadata = file.metadata
         self._total_page = file.pageCount
         file.close()
@@ -85,3 +89,17 @@ class Point:
     def update(self, x, y):
         self.x = x
         self.y = y
+
+
+class DBManger:
+    def __init__(self, name):
+        self.name = name
+        
+    def __enter__(self):
+        self.conn = sqlite3.connect(self.name)
+        return self.conn
+        
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.conn.close()
+        if exc_val:
+            raise

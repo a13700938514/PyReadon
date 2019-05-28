@@ -1,11 +1,19 @@
-from PyQt5.QtWidgets import QScrollArea, QShortcut
+from PyQt5.QtWidgets import QScrollArea, QShortcut, QLabel
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QKeySequence
 
 class MyArea(QScrollArea):
-    def init(self, widget):
-        self.widget = widget
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.widget = parent
+        self.initUi()
+
+        
+    
+    def initUi(self):
         self.init_action()
+    
+    
         
     def init_action(self):
         zoom_minus = QShortcut(QKeySequence("Ctrl+-"), self)

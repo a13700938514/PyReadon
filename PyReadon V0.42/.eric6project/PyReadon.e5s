@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Session SYSTEM "Session-6.2.dtd">
+<!-- eric6 session file for project PyReadon -->
+<!-- This file was generated automatically, do not edit. -->
+<!-- Saved: 2019-04-03, 17:19:20 -->
+<Session version="6.2">
+  <ViewManagerSplits count="1" orientation="2"/>
+  <Filenames>
+    <Filename cline="248" cindex="38" folds="" zoom="5" cloned="0" splitindex="0" editorindex="0">D:\QQPCmgr\Desktop\eric\PyReadon V0.41\__main__.py</Filename>
+    <Filename cline="11" cindex="37" folds="" zoom="5" cloned="0" splitindex="0" editorindex="1">D:\QQPCmgr\Desktop\eric\PyReadon V0.41\utils.py</Filename>
+    <Filename cline="33" cindex="30" folds="" zoom="5" cloned="0" splitindex="0" editorindex="2">D:\QQPCmgr\Desktop\eric\PyReadon V0.41\database.py</Filename>
+  </Filenames>
+  <ActiveWindow cline="248" cindex="38">D:\QQPCmgr\Desktop\eric\PyReadon V0.41\__main__.py</ActiveWindow>
+  <Breakpoints/>
+  <Watchexpressions/>
+  <DebugInfo>
+    <VirtualEnv></VirtualEnv>
+    <CommandLine></CommandLine>
+    <WorkingDirectory></WorkingDirectory>
+    <Environment></Environment>
+    <ReportExceptions value="True"/>
+    <Exceptions/>
+    <IgnoredExceptions/>
+    <AutoClearShell value="True"/>
+    <TracePython value="False"/>
+    <AutoContinue value="True"/>
+    <CovexcPattern/>
+  </DebugInfo>
+  <Bookmarks>
+    <Bookmark>
+      <BmFilename>D:\QQPCmgr\Desktop\eric\PyReadon V0.41\__main__.py</BmFilename>
+      <Linenumber value="63"/>
+    </Bookmark>
+    <Bookmark>
+      <BmFilename>D:\QQPCmgr\Desktop\eric\PyReadon V0.41\__main__.py</BmFilename>
+      <Linenumber value="176"/>
+    </Bookmark>
+  </Bookmarks>
+  <ProjectBrowserStates>
+    <ProjectBrowserState name="sources">
+      <ExpandedItemName>D:\QQPCmgr\Desktop\eric\PyReadon V0.41\__main__.py</ExpandedItemName>
+      <ExpandedItemName>D:\QQPCmgr\Desktop\eric\PyReadon V0.41\__main__.py@@22</ExpandedItemName>
+      <ExpandedItemName>D:\QQPCmgr\Desktop\eric\PyReadon V0.41\database.py</ExpandedItemName>
+      <ExpandedItemName>D:\QQPCmgr\Desktop\eric\PyReadon V0.41\utils.py</ExpandedItemName>
+      <ExpandedItemName>D:\QQPCmgr\Desktop\eric\PyReadon V0.41\utils.py@@7</ExpandedItemName>
+      <ExpandedItemName>D:\QQPCmgr\Desktop\eric\PyReadon V0.41\utils.py@@42</ExpandedItemName>
+    </ProjectBrowserState>
+    <ProjectBrowserState name="forms"/>
+    <ProjectBrowserState name="resources"/>
+    <ProjectBrowserState name="translations"/>
+    <ProjectBrowserState name="interfaces"/>
+    <ProjectBrowserState name="protocols"/>
+    <ProjectBrowserState name="others"/>
+  </ProjectBrowserStates>
+</Session>

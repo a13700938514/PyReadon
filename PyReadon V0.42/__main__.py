@@ -73,12 +73,14 @@ class Reader(QMainWindow, Ui_MainWindow):
         self._init_bookset()
 
     # 连接数据库
+    # 更改图书地址删除存储
     def _init_bookset(self):
         self.booklist = [book for book in read_db()]
         self.read_list = [None] 
         self.read_list.extend(book for book in self.booklist if book.flag)
         for book in self.read_list[1:]:
             self.read_book(book)
+ 
             
         # 设置封面
         for book in self.booklist:
@@ -139,6 +141,7 @@ class Reader(QMainWindow, Ui_MainWindow):
         page = doc.loadPage(0)
         # 生成封面图像
         cover = render_pdf_page(page)
+        doc.close()
         label = QLabel(self)
         #label.resize(self.width, self.width * 4 // 3)
         # 设置图片自动填充 label
@@ -263,7 +266,7 @@ class Reader(QMainWindow, Ui_MainWindow):
     def book_area(self, page):
         label = self.page_pixmap(page)
         area = MyArea(self)
-        area.init(self)
+#        area.init(self)
         area.setWidget(label)
 
         vbox = QVBoxLayout()
@@ -271,8 +274,7 @@ class Reader(QMainWindow, Ui_MainWindow):
         return vbox
 
     def set_current_page(self, right):
-        index = self.tabwidget.currentIndex()
-        book = self.read_list[index]
+        book = self.get_read_book()
         # 之后统一在 book 中
         if right and book.page < book.total_page:
             book.page += 1
@@ -284,9 +286,14 @@ class Reader(QMainWindow, Ui_MainWindow):
         self.set_current_page(right)
         self.set_page()
 
-    def set_page(self):
+    def get_read_book(self):
         index = self.tabwidget.currentIndex()
         book = self.read_list[index]
+        return book
+        
+
+    def set_page(self):
+        book = self.get_read_book()
         # 加载页面
         doc = fitz.open(book.fname)
         page = doc.loadPage(book.page)
